@@ -26,7 +26,7 @@ class CodiPost extends StatelessWidget {
               tag: 'post' + index.toString(),
               child: Image(
                 image: NetworkImage(imgSorce),
-                width: 200,
+                // width: 200,
               ),
             ),
           )),

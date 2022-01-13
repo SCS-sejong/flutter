@@ -1,3 +1,4 @@
+import 'package:demo_ver_1_2_0/apps/talkContainer.dart';
 import 'package:flutter/material.dart';
 
 class Talk extends StatelessWidget {
@@ -8,9 +9,10 @@ class Talk extends StatelessWidget {
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.only(top: 5.0),
-        child: Column(
-          children: const [Text('TALK')],
-        ),
+        child: SingleChildScrollView(
+            child: TalkContainer(
+          order: [2, 0, 1, 3, 5, 4],
+        )),
       ),
     );
   }

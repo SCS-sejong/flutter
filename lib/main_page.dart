@@ -1,5 +1,4 @@
 import 'package:demo_ver_1_2_0/apps/scs_drawer.dart';
-import 'package:demo_ver_1_2_0/category/bestcodi.dart';
 import 'package:demo_ver_1_2_0/category/closet.dart';
 import 'package:demo_ver_1_2_0/category/codi.dart';
 import 'package:demo_ver_1_2_0/category/magazine.dart';
@@ -22,19 +21,22 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 7,
+      length: 6,
       child: Scaffold(
           appBar: AppBar(
-            title: Text(widget.title),
-            backgroundColor: Colors.white,
-            titleTextStyle: const TextStyle(color: Colors.black, fontSize: 30),
+            title: Image(
+              image: AssetImage('image/logo/scs_logo.png'),
+              width: 90,
+            ),
+            backgroundColor: Colors.black,
+            titleTextStyle: const TextStyle(color: Colors.white, fontSize: 30),
             centerTitle: true,
             elevation: 0.0,
             leading: Builder(builder: (context) {
               return IconButton(
                 icon: Icon(
                   Icons.menu,
-                  color: Colors.grey[900],
+                  color: Colors.grey[200],
                 ),
                 onPressed: () {
                   Scaffold.of(context).openDrawer();
@@ -52,9 +54,6 @@ class _MainPageState extends State<MainPage> {
                 ),
                 Tab(
                   text: 'SHARE',
-                ),
-                Tab(
-                  text: 'BESTCODI',
                 ),
                 Tab(
                   text: 'CODI',
@@ -75,7 +74,6 @@ class _MainPageState extends State<MainPage> {
                 Magazine(),
                 Closet(),
                 Share(),
-                BestCodi(),
                 Codi(),
                 Talk(),
                 QNA()

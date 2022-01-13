@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:demo_ver_1_2_0/models/post.dart';
-import 'package:demo_ver_1_2_0/apps/codiContainer.dart';
+import 'package:demo_ver_1_2_0/apps/talkContainer.dart';
 
 class CodiInfoPage extends StatefulWidget {
   const CodiInfoPage(
@@ -75,11 +75,17 @@ class _CodiInfoPageState extends State<CodiInfoPage> {
                         const SizedBox(
                           width: 5,
                         ),
-                        Icon(
-                          Icons.favorite_sharp,
-                          color: Colors.red[400],
-                          size: 20,
-                        ),
+                        IconButton(
+                            onPressed: () {
+                              setState(() {
+                                post.like++;
+                              });
+                            },
+                            icon: Icon(
+                              Icons.favorite_sharp,
+                              color: Colors.red[400],
+                              size: 20,
+                            )),
                       ])
                     ],
                   ),
